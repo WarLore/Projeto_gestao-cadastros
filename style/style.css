@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /*background-color: #9fb1bc;*/
+    background: rgb(228,226,226);
+    background: linear-gradient(90deg, rgba(228,226,226,1) 4%, rgba(176,172,168,1) 38%, rgba(226,224,215,1) 100%);
+    font-family: 'Noto Sans', sans-serif;
+}
+
+header{
+    font-weight: 700;
+    background-color: rgb(100, 100, 98);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+img{
+    margin: 5px;
+}
+
+/* Container botões */
+
+main.container-botoes{
+    display: flex;
+    margin-top: 150px;
+    justify-content: center;
+}
+
+main.container-botoes a{
+    width: fit-content;
+}
+
+.botao{
+    margin: 0 20px;
+    padding: 12px 20px;
+    max-width: 200px;
+    background-color: #f2f3ae;
+    background-color: #fcfcfc;
+    color: #626464;
+    border-radius: 6px;
+    border: 0;
+    transition: background-color 0.2s;
+    font-size: 16px;
+    font-weight: 600;
+    height: fit-content;
+}
+
+.botao:hover{
+    color: white;
+    cursor: pointer;
+    background-color: #717e8d;
+    transition: all .5s;
+}
+
+/* Container cadastro */
+
+main.container-cadastro{
+    display: flex;
+    flex-direction: column;
+    margin: 50px 200px ;
+}
+
+main.container-cadastro a{
+    width: fit-content;
+}
+
+/* Formulário */
+
+#formulario{
+    margin: 0px 20px;
+    color: #fff;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+div.form-campos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.label-input{
+    display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-top: 5px;
+}
+
+input.input{
+    border: 1px solid #dfe1e500;
+    border-radius: 6px;
+    outline-width: 0;
+    height: 30px;
+    padding-left: 10px;
+}
+
+input.input:hover, :focus{
+    box-shadow: 0 1px 6px #20212447;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+    -moz-appearance: textfield;
+}
+
+/* Tabela */
+
+main.container-cadastro table{
+    margin: 40px 20px;
+    color: #fff;
+}
+
+main.container-cadastro table td, th{
+    width: 10%;
+}
+
+main.container-cadastro table thead{
+    background-color: rgb(100, 100, 98);
+}
+
+main.container-cadastro table thead tr th{
+    font-weight: 500;
+}
+
+main.container-cadastro table tbody{
+    text-align: center;
+    font-weight: 300;
+    background-color: #7b7e80;
+}
