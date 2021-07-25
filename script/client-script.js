@@ -32,11 +32,11 @@ form.addEventListener('submit', (e) => {
     //Validando CPF e Telefone
 
     if(dados.cpf.length !== 11) {
-        swal('CPF inválido!', 'Por favor, digite um CPF válido!', 'error')
+        window.alert('CPF inválido, por favor, digite novamente.')
     } else if(dados.telefone.length !== 11) {
-        swal('Telefone inválido!', 'Por favor, digite um telefone válido!', 'error')
+        window.alert('Número de telefone inválido, por favor, digite novamente.')
     } else if(dados.cep.length !==8){
-        swal('CEP inválido!', 'Por favor, digite um CEP válido!', 'error')
+        window.alert('CEP inválido, por favor, digite novamente.')
     } else{
 
         let valoresDados = Object.values(dados)
@@ -57,6 +57,5 @@ form.addEventListener('submit', (e) => {
         clientes.push(dados)
         let clientesConvertidos = JSON.stringify(clientes)
         localStorage.setItem('cliente', clientesConvertidos)
-        swal('Tudo certo!', 'Cliente cadastrado com sucesso!', 'success')
     }
 })

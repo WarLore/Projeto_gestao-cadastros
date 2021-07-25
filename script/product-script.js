@@ -4,16 +4,20 @@ form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     //Adicionar produto na tabela
-    let categoria = document.getElementById('categoria').value
-    let nome = document.getElementById('nome').value
-    let marca = document.getElementById('marca').value
-    let quantidade = document.getElementById('quantidade').value
+    const categoria = document.getElementById('categoria').value
+    const nome = document.getElementById('nome').value
+    const marca = document.getElementById('marca').value
+    const quantidade = document.getElementById('quantidade').value
+    const preco_compra = document.getElementById('preco-compra').value
+    const preco_venda = document.getElementById('preco-venda').value
 
-    let dados = {
+    const dados = {
         categoria,
         nome,
         marca,
-        quantidade
+        quantidade,
+        preco_compra,
+        preco_venda
     }
 
     let valoresDados = Object.values(dados)
@@ -33,5 +37,4 @@ form.addEventListener('submit', (e) => {
     produtos.push(dados)
     let produtosConvertidos = JSON.stringify(produtos)
     localStorage.setItem('produto', produtosConvertidos)
-    swal('Tudo certo!', 'Produto cadastrado com sucesso!', 'success')
 })
